@@ -1,6 +1,6 @@
 # cpp-algorithms
 
-C++17 algorithm solutions, with custom data structures planned.
+C++17 algorithm solutions and custom data structures.
 
 | # | Task | Approach | Time | Space |
 |---|------|----------|------|-------|
@@ -11,9 +11,16 @@ C++17 algorithm solutions, with custom data structures planned.
 | 5 | Valid Brackets | `std::stack` matching | O(n) | O(n) |
 | 6 | Range Sum Queries | Prefix sums | O(n + Q) | O(n) |
 
+## Data Structures
+
+| Structure | Status |
+|-----------|--------|
+| Vector | Basic version: pushBack, popBack, at |
+
 ## Build
 
 ```bash
 cmake -S . -B build
 cmake --build build
 ```
+

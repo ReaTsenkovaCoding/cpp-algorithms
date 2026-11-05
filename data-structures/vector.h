@@ -1,0 +1,65 @@
+/*
+Vector: a dynamic array of integers.
+Doubles its capacity when full and copies the elements to the new memory.
+pushBack: O(1) amortized
+popBack, at: O(1)
+*/
+
+#pragma once
+#include <stdexcept>
+
+class Vector {
+private:
+	int* data = nullptr;
+	int size = 0;
+	int capacity = 0;
+
+public:
+	Vector() {
+
+	}
+
+	~Vector() {
+		delete[] data;
+	}
+
+	void pushBack(int value) {
+		if (size == capacity) {
+			if (capacity == 0) capacity = 1;
+			else capacity *= 2;
+			int* newData = new int[capacity];
+
+			for (int i = 0; i < size; i++) {
+				newData[i] = data[i];
+			}
+			delete[] data;
+			data = newData;
+
+		}
+		data[size] = value;
+		size += 1;
+	}
+
+	void popBack() {
+		if (size == 0) {
+			throw std::out_of_range("Vector is empty");
+		}
+		size -= 1;
+	}
+
+	int at(int index) {
+		if (index < 0 || index >= size) {
+			throw std::out_of_range("Index out of range");
+		}
+		return data[index];
+	}
+
+	int getSize() {
+		return size;
+	}
+
+	int getCapacity() {
+		return capacity;
+	}
+
+};

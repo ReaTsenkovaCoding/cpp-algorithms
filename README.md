@@ -9,6 +9,7 @@ C++17 algorithm solutions, with custom data structures planned.
 | 3 | Two Sum | `std::map` lookup | O(n log n) | O(n) |
 | 4 | Binary Search (First Occurrence) | Binary search | O(n + Q log n) | O(n) |
 | 5 | Valid Brackets | `std::stack` matching | O(n) | O(n) |
+| 6 | Range Sum Queries | Prefix sums | O(n + Q) | O(n) |
 
 ## Build
 

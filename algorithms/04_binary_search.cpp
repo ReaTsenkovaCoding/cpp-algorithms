@@ -17,7 +17,7 @@ int main() {
 	cin >> n;
 
 	if (n <= 0) {
-		cout << "\nnn can't be a 0 or a negative number.";
+		cout << "\nn can't be a 0 or a negative number.";
 		return 0;
 	}
 
@@ -50,7 +50,7 @@ int main() {
 			}
 		}
 		if (answer == -1) cout << -1 << "\n";
-		else cout << answer + 1 << "\n";
+		else cout << "\nAnswer: " << answer + 1 << "\n";
 	}
 
 	return 0;

@@ -49,7 +49,7 @@ int main() {
 				l = mid + 1;
 			}
 		}
-		if (answer == -1) cout << -1 << "\n";
+		if (answer == -1) cout <<"\nAnswer: " << - 1 << "\n";
 		else cout << "\nAnswer: " << answer + 1 << "\n";
 	}
 

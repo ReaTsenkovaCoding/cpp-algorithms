@@ -6,6 +6,7 @@ C++17 algorithm solutions, with custom data structures planned.
 |---|------|----------|------|-------|
 | 1 | Second Largest Distinct Number | One pass | O(n) | O(n) |
 | 2 | Number Frequency | `std::map` counting | O(n log n) | O(n) |
+| 3 | Two Sum | `std::map` lookup | O(n log n) | O(n) |
 
 ## Build
 

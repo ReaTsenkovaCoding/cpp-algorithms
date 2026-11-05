@@ -1,2 +1,15 @@
 # cpp-algorithms
-C++ algorithm solutions and custom data structures
+
+C++17 algorithm solutions, with custom data structures planned.
+
+| # | Task | Approach | Time | Space |
+|---|------|----------|------|-------|
+| 1 | Second Largest Distinct Number | One pass | O(n) | O(n) |
+| 2 | Number Frequency | `std::map` counting | O(n log n) | O(n) |
+
+## Build
+
+```bash
+cmake -S . -B build
+cmake --build build
+```

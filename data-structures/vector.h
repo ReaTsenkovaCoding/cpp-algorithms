@@ -19,6 +19,33 @@ public:
 
 	}
 
+	Vector(const Vector& other) {
+		size = other.size;
+		capacity = other.capacity;
+		data = new int[capacity];
+		for (int i = 0; i < size; i++) {
+			data[i] = other.data[i];
+		}
+	}
+
+	Vector& operator=(const Vector& other) {
+
+		if (this == &other) {
+			return *this;
+		}
+
+		delete[] data;
+
+		size = other.size;
+		capacity = other.capacity;
+		data = new int[capacity];
+		for (int i = 0; i < size; i++) {
+			data[i] = other.data[i];
+		}
+
+		return *this;
+	}
+
 	~Vector() {
 		delete[] data;
 	}

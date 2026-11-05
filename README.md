@@ -16,6 +16,7 @@ C++17 algorithm solutions and custom data structures.
 | Structure | Status |
 |-----------|--------|
 | Vector | Basic version: pushBack, popBack, at |
+| Vector | pushBack, popBack, at, deep copy |
 
 ## Build
 

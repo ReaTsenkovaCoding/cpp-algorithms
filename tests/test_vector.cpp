@@ -29,6 +29,24 @@ int main() {
 	assert(v.getSize() == 2);
 	assert(v.getCapacity() == 4);
 
+	Vector copy = v;
+	copy.pushBack(99);
+	assert(copy.getSize() == 3);
+	assert(v.getSize() == 2);
+	assert(copy.at(0) == v.at(0));
+
+	Vector assigned;
+	assigned.pushBack(7);
+	assigned = v;
+	assert(assigned.getSize() == 2);
+	assert(assigned.at(1) == 20);
+
+	assigned.pushBack(99);
+	assert(v.getSize() == 2);
+
+	assigned = assigned;
+	assert(assigned.getSize() == 3);
+
 	cout << "All tests passed\n";
 	return 0;
 }

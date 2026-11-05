@@ -1,9 +1,11 @@
-// Task 2: Number Frequency
-// Prints each distinct number and its count in ascending order.
-//
-// Approach: count values in a map, which keeps keys sorted.
-// Time: O(n log n)
-// Space: O(n)
+/* 
+Task 2: Number Frequency
+Prints each distinct number and its count in ascending order.
+
+Approach: count values in a map, which keeps keys sorted.
+Time: O(n log n)
+Space: O(n)
+*/
 
 #include <map>
 #include <iostream>

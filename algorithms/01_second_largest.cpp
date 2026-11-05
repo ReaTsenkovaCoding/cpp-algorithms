@@ -1,10 +1,11 @@
+/*
+Task 1: Second Largest Distinct Number
+Prints the second largest distinct value, or NO if it does not exist.
 
-// Task 1: Second Largest Distinct Number
-// Prints the second largest distinct value, or NO if it does not exist.
-//
-// Approach: one pass, tracking the largest and second largest values.
-// Time: O(n)
-// Space: O(n)
+Approach: one pass, tracking the largest and second largest values.
+Time: O(n)
+Space: O(n)
+*/
 
 #include <iostream>
 #include <vector>

@@ -1,15 +1,16 @@
 /*
-Tests for the Vector class: checks size and capacity after pushBack and popBack.
+Tests for the Vector class: checks pushBack, popBack, copy, move and templates.
 */
 
+#include <iostream>
+#include <string>
 #include <cassert>
 #include <utility>
-#include <iostream>
 #include "../data-structures/vector.h"
 using namespace std;
 
 int main() {
-	Vector v;
+	Vector<int> v;
 	assert(v.getSize() == 0);
 	assert(v.getCapacity() == 0);
 
@@ -30,13 +31,13 @@ int main() {
 	assert(v.getSize() == 2);
 	assert(v.getCapacity() == 4);
 
-	Vector copy = v;
+	Vector<int> copy = v;
 	copy.pushBack(99);
 	assert(copy.getSize() == 3);
 	assert(v.getSize() == 2);
 	assert(copy.at(0) == v.at(0));
 
-	Vector assigned;
+	Vector<int> assigned;
 	assigned.pushBack(7);
 	assigned = v;
 	assert(assigned.getSize() == 2);
@@ -48,21 +49,27 @@ int main() {
 	assigned = assigned;
 	assert(assigned.getSize() == 3);
 
-	Vector source;
+	Vector<int> source;
 	source.pushBack(10);
 	source.pushBack(20);
 
-	Vector moved = std::move(source);
+	Vector<int> moved = std::move(source);
 	assert(moved.getSize() == 2);
 	assert(moved.at(1) == 20);
 	assert(source.getSize() == 0);
 
-	Vector target;
+	Vector<int> target;
 	target.pushBack(1);
 	target = std::move(moved);
 	assert(target.getSize() == 2);
 	assert(target.at(0) == 10);
 	assert(moved.getSize() == 0);
+
+	Vector<string> names;
+	names.pushBack("Rea");
+	names.pushBack("IBM");
+	assert(names.getSize() == 2);
+	assert(names.at(1) == "IBM");
 
 	cout << "All tests passed\n";
 	return 0;

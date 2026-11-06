@@ -1,5 +1,5 @@
 /*
-Vector: a dynamic array of integers.
+Vector: a dynamic array of integers на a dynamic array of any type.
 Doubles its capacity when full and copies the elements to the new memory.
 pushBack: O(1) amortized
 popBack, at: O(1)
@@ -8,9 +8,10 @@ popBack, at: O(1)
 #pragma once
 #include <stdexcept>
 
+template <typename T>
 class Vector {
 private:
-	int* data = nullptr;
+	T* data = nullptr;
 	int size = 0;
 	int capacity = 0;
 
@@ -22,7 +23,7 @@ public:
 	Vector(const Vector& other) {
 		size = other.size;
 		capacity = other.capacity;
-		data = new int[capacity];
+		data = new T[capacity];
 		for (int i = 0; i < size; i++) {
 			data[i] = other.data[i];
 		}
@@ -38,7 +39,7 @@ public:
 
 		size = other.size;
 		capacity = other.capacity;
-		data = new int[capacity];
+		data = new T[capacity];
 		for (int i = 0; i < size; i++) {
 			data[i] = other.data[i];
 		}
@@ -73,11 +74,11 @@ public:
 		delete[] data;
 	}
 
-	void pushBack(int value) {
+	void pushBack(T value) {
 		if (size == capacity) {
 			if (capacity == 0) capacity = 1;
 			else capacity *= 2;
-			int* newData = new int[capacity];
+			T* newData = new T[capacity];
 
 			for (int i = 0; i < size; i++) {
 				newData[i] = data[i];
@@ -97,7 +98,7 @@ public:
 		size -= 1;
 	}
 
-	int at(int index) {
+	T at(int index) {
 		if (index < 0 || index >= size) {
 			throw std::out_of_range("Index out of range");
 		}

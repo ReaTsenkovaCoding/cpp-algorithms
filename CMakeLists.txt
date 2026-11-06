@@ -13,4 +13,5 @@ add_executable(task06 algorithms/06_range_sum.cpp)
 add_executable(test_vector tests/test_vector.cpp)
 add_executable(task07 algorithms/07_subsets.cpp)
 add_executable(task08 algorithms/08_max_meetings.cpp)
+add_executable(task09 algorithms/09_min_coins.cpp)
 

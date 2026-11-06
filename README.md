@@ -10,6 +10,7 @@ C++17 algorithm solutions and custom data structures.
 | 4 | Binary Search (First Occurrence) | Binary search | O(n + Q log n) | O(n) |
 | 5 | Valid Brackets | `std::stack` matching | O(n) | O(n) |
 | 6 | Range Sum Queries | Prefix sums | O(n + Q) | O(n) |
+| 7 | All Subsets | Recursion (backtracking) | O(n·2^n) | O(n) |
 
 ## Data Structures
 

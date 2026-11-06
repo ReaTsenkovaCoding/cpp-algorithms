@@ -11,6 +11,7 @@ C++17 algorithm solutions and custom data structures.
 | 5 | Valid Brackets | `std::stack` matching | O(n) | O(n) |
 | 6 | Range Sum Queries | Prefix sums | O(n + Q) | O(n) |
 | 7 | All Subsets | Recursion (backtracking) | O(n·2^n) | O(n) |
+| 8 | Max Meetings | Greedy (sort by end time) | O(n log n) | O(n) |
 
 ## Data Structures
 

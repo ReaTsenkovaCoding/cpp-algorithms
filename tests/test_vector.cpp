@@ -3,6 +3,7 @@ Tests for the Vector class: checks size and capacity after pushBack and popBack.
 */
 
 #include <cassert>
+#include <utility>
 #include <iostream>
 #include "../data-structures/vector.h"
 using namespace std;
@@ -46,6 +47,22 @@ int main() {
 
 	assigned = assigned;
 	assert(assigned.getSize() == 3);
+
+	Vector source;
+	source.pushBack(10);
+	source.pushBack(20);
+
+	Vector moved = std::move(source);
+	assert(moved.getSize() == 2);
+	assert(moved.at(1) == 20);
+	assert(source.getSize() == 0);
+
+	Vector target;
+	target.pushBack(1);
+	target = std::move(moved);
+	assert(target.getSize() == 2);
+	assert(target.at(0) == 10);
+	assert(moved.getSize() == 0);
 
 	cout << "All tests passed\n";
 	return 0;

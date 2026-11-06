@@ -46,6 +46,29 @@ public:
 		return *this;
 	}
 
+	Vector(Vector&& other) {
+		data = other.data;
+		size = other.size;
+		capacity = other.capacity;
+		other.data = nullptr;
+		other.size = 0;
+		other.capacity = 0;
+	}
+
+	Vector& operator = (Vector&& other) {
+		if (this == &other) {
+			return *this;
+		}
+		delete[] data;
+		data = other.data;
+		size = other.size;
+		capacity = other.capacity;
+		other.data = nullptr;
+		other.size = 0;
+		other.capacity = 0;
+		return *this;
+	}
+
 	~Vector() {
 		delete[] data;
 	}

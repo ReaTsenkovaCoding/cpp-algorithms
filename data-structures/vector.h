@@ -1,5 +1,5 @@
 /*
-Vector: Vector: a dynamic array of any type.
+Vector: a dynamic array of any type.
 Doubles its capacity when full and copies the elements to the new memory.
 pushBack: O(1) amortized
 popBack, at: O(1)
